@@ -93,11 +93,11 @@ en.place(x = 400, y= 150)
 btn = Button(fm,text='Check it!!', bg='black',fg='white',height=1,command=check)
 btn.place(x=490, y=155)
 
-l5 = Label(fm,text="Hint!! :",bg='black',fg='white' ,font=('arial',12))
-l5.place(x = 150, y= 250)
+l5 = Label(fm,text="Hint!! :",bg='black',fg='lightblue' ,font=('arial',12))
+l5.place(x = 30, y= 250)
 
-l6 = Label(fm,textvariable=hint,bg='black',fg='white' ,font=('arial',12))
-l6.place(x = 210, y= 250)
+l6 = Label(fm,textvariable=hint,bg='black',fg='yellow' ,font=('arial',12))
+l6.place(x = 100, y= 250)
 
 l7 = Label(fm,textvariable=ans , bg='black', fg='red').place(x=350, y=200)
 
