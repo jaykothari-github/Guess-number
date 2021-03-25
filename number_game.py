@@ -36,13 +36,13 @@ def check():
         else:
             ans.set("Oooppps!! Sorry!! Wrong one!! \n Please try again...")
             if abs(int(cc) - int(uc)) <= 5:
-                hint.set("You've almost guess it !! in deffernce of 5")
+                hint.set("You've almost guess it !! number is within the differnce of 5")
             
             elif abs(int(cc) - int(uc)) <= 10 and int(cc) < int(uc):
-                hint.set("You are quite near !! go down!!")
+                hint.set("You are quite near !! Keep going down!!")
 
             elif abs(int(cc) - int(uc)) <= 10 and int(cc) > int(uc):
-                hint.set("You are quite near !! go up")
+                hint.set("You are quite near !! Keep going up")
             
             elif abs(int(cc) - int(uc)) <= 20 and int(cc) < int(uc):
                 hint.set("Guess is little bit high !!")
