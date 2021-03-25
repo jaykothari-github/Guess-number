@@ -17,6 +17,11 @@ var.set('XX')
 ans = StringVar()
 hint = StringVar()
 hint.set('Number is between 1 to 100.')
+hist = StringVar()
+gh = ''
+count = 0
+count_l = IntVar()
+
 
 def check():
     uc = en.get()
@@ -26,9 +31,8 @@ def check():
             var.set(cc)
             showinfo("Winner","🎉🎉Congratulations!! You've guess the right number!!🎉🎉")
             ans.set("🙌🙌Right one!!🙌🙌")
-            hint.set('🎉🎉Congratulations!! player...')
+            hint.set('🎉🎉Congratulations!! player...🎉🎉')
             
-
         else:
             ans.set("Oooppps!! Sorry!! Wrong one!! \n Please try again...")
             if abs(int(cc) - int(uc)) <= 5:
@@ -52,10 +56,16 @@ def check():
             else:
                 hint.set('Still so Far away')
 
-
     else:
         showerror("Guess the Number","Please enter only number!!")
 
+    global gh 
+    global count
+
+    count+=1
+    gh = gh+' '+','+ uc
+    hist.set(gh)
+    count_l.set(count)
 
 
 l1 = Label(fm,text='Welcome to the Game!!',bg='black',fg='lightgreen' ,font=('arial',20,'bold'))
@@ -87,5 +97,11 @@ l6 = Label(fm,textvariable=hint,bg='black',fg='white' ,font=('arial',12))
 l6.place(x = 210, y= 270)
 
 l7 = Label(fm,textvariable=ans , bg='black', fg='red').place(x=350, y=200)
+
+l8 = Label(fm,textvariable=hist , bg='black', fg='lightblue').place(x=120, y=350)
+l8 = Label(fm,text='Guess History > ' , bg='black', fg='lightblue').place(x=30, y=350)
+
+l8 = Label(fm,textvariable= count_l, bg='black', fg='lightblue').place(x=250, y=220)
+l8 = Label(fm,text='No. of Guesses :' , bg='black', fg='lightblue').place(x=150, y=220)
 
 rw.mainloop()
