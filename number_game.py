@@ -26,7 +26,7 @@ def check():
             var.set(cc)
             showinfo("Winner","🎉🎉Congratulations!! You've guess the right number!!🎉🎉")
             ans.set("🙌🙌Right one!!🙌🙌")
-            hint.set('Congratulations!! player...')
+            hint.set('🎉🎉Congratulations!! player...')
             
 
         else:
