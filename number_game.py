@@ -36,10 +36,13 @@ def check():
         else:
             ans.set("Oooppps!! Sorry!! Wrong one!! \n Please try again...")
             if abs(int(cc) - int(uc)) <= 5:
-                hint.set("You've almost guess it !!")
+                hint.set("You've almost guess it !! in deffernce of 5")
             
-            elif abs(int(cc) - int(uc)) <= 10:
-                hint.set("You are quite near !!")
+            elif abs(int(cc) - int(uc)) <= 10 and int(cc) < int(uc):
+                hint.set("You are quite near !! go down!!")
+
+            elif abs(int(cc) - int(uc)) <= 10 and int(cc) > int(uc):
+                hint.set("You are quite near !! go up")
             
             elif abs(int(cc) - int(uc)) <= 20 and int(cc) < int(uc):
                 hint.set("Guess is little bit high !!")
@@ -77,31 +80,31 @@ line.place(x = 50, y= 50)
 l2 = Label(fm,text='Computer have guess the number',bg='black',fg='#4287f5' ,font=('arial',12))
 l2.place(x = 10, y= 100)
 
-l3 = Label(fm,textvariable=var ,bg='black',fg='white' ,font=('arial',12,'bold'))
+l3 = Label(fm,textvariable=var ,bg='black',fg='#dc143c' ,font=('arial',12,'bold'))
 l3.place(x = 100, y= 150)
 
 
 l4 = Label(fm,text="Guess Computer's number",bg='black',fg='#4287f5' ,font=('arial',12))
 l4.place(x = 350, y= 100)
 
-en = Entry(fm,bg='#101010',fg='white',width=5, font=('arial',20,'bold'))
+en = Entry(fm,bg='#101010',fg='#dc143c',width=5, font=('arial',20,'bold'))
 en.place(x = 400, y= 150)
 
 btn = Button(fm,text='Check it!!', bg='black',fg='white',height=1,command=check)
 btn.place(x=490, y=155)
 
 l5 = Label(fm,text="Hint!! :",bg='black',fg='white' ,font=('arial',12))
-l5.place(x = 150, y= 270)
+l5.place(x = 150, y= 250)
 
 l6 = Label(fm,textvariable=hint,bg='black',fg='white' ,font=('arial',12))
-l6.place(x = 210, y= 270)
+l6.place(x = 210, y= 250)
 
 l7 = Label(fm,textvariable=ans , bg='black', fg='red').place(x=350, y=200)
 
-l8 = Label(fm,textvariable=hist , bg='black', fg='lightblue').place(x=120, y=350)
-l8 = Label(fm,text='Guess History > ' , bg='black', fg='lightblue').place(x=30, y=350)
+l8 = Label(fm,textvariable=hist , bg='black', fg='lightgreen',font=('arial',14)).place(x=120, y=346)
+l8 = Label(fm,text='Guess History > ' , bg='black', fg='lightblue',font=('arial',10)).place(x=30, y=350)
 
-l8 = Label(fm,textvariable= count_l, bg='black', fg='lightblue').place(x=250, y=220)
-l8 = Label(fm,text='No. of Guesses :' , bg='black', fg='lightblue').place(x=150, y=220)
+l8 = Label(fm,textvariable= count_l, bg='black', fg='lightgreen',font=('arial',14)).place(x=150, y=300)
+l8 = Label(fm,text='No. of Guesses :' , bg='black', fg='lightblue',font=('arial',10)).place(x=30, y=300)
 
 rw.mainloop()
