@@ -14,5 +14,5 @@ I use different widgets to create buttons, labels, frames and entry field.
 
 ## Screen Look:
 
-![alt text](https://github.com/jaykothari-github/Guess-number/blob/main/Guess-number_look.jpg?raw=true)
+![Guess number screen look](https://github.com/jaykothari-github/Guess-number/blob/main/Guess-number_look.jpg?raw=true)
 
